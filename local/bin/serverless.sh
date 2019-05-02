@@ -1,4 +1,4 @@
-source ./bin/init.sh
+source ./bin/helpers.sh
 
 DOCKER_COMPOSE_FILE="docker-compose.serverless.yml"
 
