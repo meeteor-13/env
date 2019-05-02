@@ -2,6 +2,6 @@ version: "3.7"
 
 services:
   authorization:
-    entrypoint: 'false'
+    entrypoint: 'true'
   core:
-    entrypoint: 'false'
+    entrypoint: 'true'
