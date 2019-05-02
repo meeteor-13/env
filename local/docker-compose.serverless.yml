@@ -1,0 +1,7 @@
+version: "3.7"
+
+services:
+  authorization:
+    entrypoint: 'false'
+  core:
+    entrypoint: 'false'
