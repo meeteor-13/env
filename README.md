@@ -4,14 +4,14 @@
 
 ## Environments
 
-- [Local](local/README.md)
+- [Local](local)
 
 ## Usage
 
 1. Clone repository with `--recurse-submodules` flag:
 
 ```bash
-git clone git@github.com:meeteor-13/env.git `--recurse-submodules`
+git clone git@github.com:meeteor-13/env.git --recurse-submodules
 ```
 
 1. Change directory to preffered environment:
