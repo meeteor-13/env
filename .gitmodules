@@ -1,0 +1,8 @@
+[submodule ".repos/authorization"]
+	path = .repos/authorization
+	url = git@github.com:meeteor-13/authorization.git
+	branch = master
+[submodule ".repos/core"]
+	path = .repos/core
+	url = git@github.com:meeteor-13/core.git
+	branch = master
