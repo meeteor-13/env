@@ -6,7 +6,7 @@
 
 - **severless**
 - **full**
-- **full-remote**
+- **full-remote** //TBD
 
 ### Common
 
