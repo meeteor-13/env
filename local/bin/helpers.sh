@@ -1,8 +1,8 @@
-ARGS=${@}
+COMPOSE_ARGS=${@}
 
 function start {
-    DOCKER_COMPOSE_PATH=$(find ../.repos/ -type f -name "docker-compose.yml" -printf ' -f %p')
-    local cmd="docker-compose $DOCKER_COMPOSE_PATH $DOCKER_COMPOSE_OVERRIDE_PATH $ARGS"
+    COMPOSE_PATH=$(find ../.repos/ -type f -name "docker-compose.yml" -printf ' -f %p')
+    local cmd="docker-compose $COMPOSE_PATH $COMPOSE_PATH_OVERRIDE $COMPOSE_ARGS"
     echo $cmd
     exec $cmd
 }

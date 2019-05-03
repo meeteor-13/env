@@ -17,11 +17,11 @@ Usage template:
 ./bin/$mode [options] [COMMAND] [ARGS...]
 ```
 
-To override docker-compose filepath use following environment variable `DOCKER_COMPOSE_OVERRIDE_PATH`.  
+To override docker-compose filepath use following environment variable `COMPOSE_PATH_OVERRIDE`.  
 An example:
 
 ```bash
-export DOCKER_COMPOSE_OVERRIDE_PATH="-f docker-compose.override.yml"
+export COMPOSE_PATH_OVERRIDE="-f docker-compose.override.yml"
 ```
 
 ### Serverless mode
