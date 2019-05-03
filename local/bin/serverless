@@ -1,4 +1,6 @@
-source ./bin/helpers.sh
+#!/bin/sh
+
+source ./bin/helpers
 
 COMPOSE_PATH_OVERRIDE="-f docker-compose.serverless.yml $COMPOSE_PATH_OVERRIDE"
 
