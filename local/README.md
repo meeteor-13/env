@@ -31,3 +31,11 @@ Run only accessory services (databases, distributed caches, etc) with exposed po
 ```bash
 ./bin/serverless [options] [COMMAND] [ARGS...]
 ```
+
+### Full mode
+
+Run fully dockerized application stack.
+
+```bash
+./bin/serverless [options] [COMMAND] [ARGS...]
+```
