@@ -1,9 +1,24 @@
 #!/bin/sh
 
+TEMP_DIR=${TEMP_DIR:-"tmp"}
+mkdir -p $TEMP_DIR
+
+SCRIPT=$(basename "$0")
+
 function start {
-    local compose_path=$(find ../.repos/ -type f -name "docker-compose.yml" -printf ' -f %p')
-    local compose_args=${@}
-    local cmd="docker-compose $compose_path $COMPOSE_PATH_OVERRIDE $compose_args"
+    local compose_bundle=$TEMP_DIR/docker-compose.$SCRIPT.bundle.yml
+    echo "version: \"3.7\"" > $compose_bundle                                  
+    local compose_files=$(find ../.repos/ -type f -name docker-compose.yml)
+    compose_files+=("${COMPOSE_PATH_OVERRIDE/'-f '/}")
+
+    for compose_file in ${compose_files[@]}; do
+        local compose_bundle_tmp=$compose_bundle.tmp
+        mv -f $compose_bundle $compose_bundle_tmp
+        docker-compose -f $compose_file -f $compose_bundle_tmp config > $compose_bundle
+        rm -f $compose_bundle_tmp 2>/dev/null
+    done
+
+    local cmd="docker-compose -f $compose_bundle ${@}"
     echo $cmd
     exec $cmd
 }
