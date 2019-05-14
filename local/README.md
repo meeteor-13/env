@@ -6,7 +6,7 @@
 
 - **severless**
 - **full**
-- **full-remote** //TBD
+- **full-remote**
 
 ### Common
 
@@ -37,5 +37,14 @@ Run only accessory services (databases, distributed caches, etc) with exposed po
 Run fully dockerized application stack.
 
 ```bash
-./bin/serverless [options] [COMMAND] [ARGS...]
+./bin/full [options] [COMMAND] [ARGS...]
+```
+
+### Full Remote mode
+
+Run fully dockerized application stack with exposed public urls via ssh-proxy.
+All public urls can be found in the file `./tmp/output.txt`.
+
+```bash
+./bin/full-remote [options] [COMMAND] [ARGS...]
 ```
