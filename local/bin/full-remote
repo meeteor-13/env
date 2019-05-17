@@ -1,0 +1,7 @@
+#!/bin/sh
+
+source ./bin/helpers
+
+COMPOSE_PATH_OVERRIDE="-f docker-compose.full-remote.yml $COMPOSE_PATH_OVERRIDE"
+
+start ${@}

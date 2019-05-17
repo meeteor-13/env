@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  proxy:
+    container_name: proxy
+    image: alebabai/ssh-proxy:latest
+    environment:
+      ADDRESS: "core:80 authorization:80"
+    networks: 
+      - internal
+    volumes:
+      - ./tmp:/tmp/ssh-proxy

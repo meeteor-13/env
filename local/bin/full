@@ -2,4 +2,4 @@
 
 source ./bin/helpers
 
-start
+start ${@}
