@@ -7,7 +7,7 @@ services:
     environment:
       ADDRESSES: |-
         core:80
-        authorization:80
+        authorization:8080
     networks: 
       - internal
     volumes:
